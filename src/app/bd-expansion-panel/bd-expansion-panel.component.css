@@ -2,7 +2,7 @@
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   margin: 0 .5em;
-  transition: .25s ease-out;
+  transition: .2s ease-out;
 }
 .bd-expansion-panel-wrap .header, .bd-expansion-panel-wrap .content, .bd-expansion-panel-wrap .action-pane{
   padding: 1em;
