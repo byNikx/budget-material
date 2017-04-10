@@ -1,0 +1,6 @@
+<section class="bd-expansion-panel-wrap mat-elevation-z1" (click)="test()">
+  <div class="header"> Header </div>
+  <div class="content" *ngIf="_isActivePanel()"> Content </div>
+  <div class="action-pane" *ngIf="_isActivePanel()"> Footer </div>
+  <md-progress-bar mode="indeterminate" color="accent" *ngIf="_isLoadingPanel()"></md-progress-bar>
+</section>
