@@ -11,11 +11,9 @@
     </md-sidenav-container>
     <div fxFlex style="overflow:auto">
       <div class="container">
-        <bd-expansion-panel *ngFor="let i of [1,2,3,4,5]" [isLast]="i===5"></bd-expansion-panel>
+        <bd-expansion-panel *ngFor="let category of categories; let i = index" [category]="category" [isLast]="i===categories.length-1"></bd-expansion-panel>
       </div>
     </div>
-    <section fxFlex="300px">
-      kljl
-    </section>
+    
   </section>
 </section>

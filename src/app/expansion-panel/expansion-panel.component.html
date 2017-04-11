@@ -1,0 +1,51 @@
+<section [ngClass]="{'bd-expansion-panel-wrap mat-elevation-z1': true, 'last':isLastPanel(), 'active mat-elevation-z8': isActivePanel(), 'loading mat-elevation-z4': isLoadingPanel()}" fxLayout="column">
+  <div class="notification mat-elevation-z2" *ngIf="isActivePanel()" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <md-icon>sentiment_dissatisfied</md-icon>
+    <span fxFlex fxLayout="column">
+      <strong>Be careful!</strong>
+      You spent £ 21,138.00 more than you earned. </span>
+    <button md-button>GOT IT</button>
+    <button md-icon-button>
+      <md-icon>schedule</md-icon>
+    </button>
+  </div>
+  <div class="header" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="30px" (click)="test()">
+    <span fxFlex>
+      {{category.name}}
+      <span class="subhead" *ngIf="isActivePanel()"> have <strong>4</strong> sub categories</span>
+    </span>
+    <span class="secondary-text numeric" fxFlex="100px">${{category.actual}}</span>
+    <span class="secondary-text numeric" fxFlex="100px">${{category.budget}}</span>
+    <button md-icon-button>
+      <md-icon>{{isActivePanel()?'expand_less':'expand_more'}}</md-icon>
+    </button>
+  </div>
+  <div class="body" *ngIf="isActivePanel()">
+    <ul class="sub-category-list" fxLayout="column" fxLayoutGap="20px">
+      <li class="sub-category" fxLayout="row" fxLayoutGap="10px" *ngFor="let i of [1,2,3,4,5]">
+        <md-icon>subdirectory_arrow_right</md-icon>
+        <div fxLayout="column" fxFlex>
+          <h4 class="name no-margin">Child's Hobbies, Music & Sport</h4>
+          <div>
+            <label class="subhead">Budget:</label> 09780987
+          </div>
+          <div>
+            <label class="subhead">Actual:</label> 109090
+          </div>
+        </div>
+        <button md-icon-button>
+          <md-icon class="secondary-text">mode_edit</md-icon>
+        </button>
+      </li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <!-- <div class="action-pane" fxLayout="row" fxLayoutAlign="end center" *ngIf="isActivePanel()">
+    <button md-button>CANCEL</button>
+    <button md-button color="primary">SAVE</button>
+  </div> -->
+
+
+  <md-progress-bar mode="indeterminate" color="accent" *ngIf="isLoadingPanel()"></md-progress-bar>
+</section>

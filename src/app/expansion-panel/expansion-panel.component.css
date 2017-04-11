@@ -1,0 +1,50 @@
+.bd-expansion-panel-wrap{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff;
+  transition: .1s ease-out;
+}
+.bd-expansion-panel-wrap > .header{
+  min-height: 48px;
+  height: auto;
+  padding: 0 24px;
+}
+.bd-expansion-panel-wrap > .notification{
+  padding: 1em 24px;
+  min-height: 48px;
+  height: auto;
+  color:#fff;
+  background-color:rgb(255,87,34);
+  font-weight: 400;
+}
+.bd-expansion-panel-wrap > .body{
+  padding: 0 24px 16px 24px;
+  font-weight: 400;
+}
+.bd-expansion-panel-wrap.last, .bd-expansion-panel-wrap.active, .bd-expansion-panel-wrap.loading{
+  border-bottom: 0;
+}
+.bd-expansion-panel-wrap.active, .bd-expansion-panel-wrap.loading{
+  margin: 16px 0;
+}
+.bd-expansion-panel-wrap.active > .header{
+  height: 64px;
+  font-size: 16px;
+}
+
+.bd-expansion-panel-wrap > .action-pane{
+  padding: 16px 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.bd-expansion-panel-wrap > .body .sub-category-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+}
+.bd-expansion-panel-wrap > .body .sub-category-list .sub-category .name{
+  font-size: 13px;
+}

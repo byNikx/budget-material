@@ -15,7 +15,7 @@ import {
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { BdExpansionPanelComponent } from './bd-expansion-panel/bd-expansion-panel.component';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 
 const MD_COMPONENTS =[
   MdButtonModule,
@@ -30,7 +30,7 @@ const MD_COMPONENTS =[
 @NgModule({
   declarations: [
     AppComponent,
-    BdExpansionPanelComponent
+    ExpansionPanelComponent
   ],
   imports: [
     BrowserModule,
