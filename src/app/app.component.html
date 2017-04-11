@@ -11,9 +11,22 @@
     </md-sidenav-container>
     <div fxFlex style="overflow:auto">
       <div class="container">
+        <div class="toolbar" fxLayout="row" style="padding:0px 1em;">
+          <h3>Current State</h3>
+          <span fxFlex></span>
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <button md-icon-button>
+              <md-icon>chevron_left</md-icon>
+            </button>
+            <h3>April</h3>
+            <button md-icon-button>
+              <md-icon>chevron_right</md-icon>
+            </button>
+          </div>
+        </div>
         <bd-expansion-panel *ngFor="let category of categories; let i = index" [category]="category" [isLast]="i===categories.length-1"></bd-expansion-panel>
       </div>
     </div>
-    
+
   </section>
 </section>
