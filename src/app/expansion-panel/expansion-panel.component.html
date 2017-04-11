@@ -1,5 +1,5 @@
 <section [ngClass]="{'bd-expansion-panel-wrap mat-elevation-z1': true, 'last':isLastPanel(), 'active mat-elevation-z8': isActivePanel(), 'loading mat-elevation-z4': isLoadingPanel()}" fxLayout="column">
-  <div class="notification mat-elevation-z2" *ngIf="isActivePanel()" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <div class="notification mat-elevation-z2" *ngIf="isActivePanel() && category.notification" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
     <md-icon>sentiment_dissatisfied</md-icon>
     <span fxFlex fxLayout="column">
       <strong>Be careful!</strong>
