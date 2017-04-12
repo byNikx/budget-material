@@ -1,0 +1,15 @@
+<section fxLayout="row" fxLayoutGap="30px">
+  <div fxFlex fxLayout="column">
+    <div fxLayout="row" fxLayoutGap="10px">
+      <md-input-container fxFlex>
+        <input mdInput placeholder="City">
+      </md-input-container>
+      <md-select placeholder="Transaction Type">
+         <md-option *ngFor="let type of ['Expense', 'Income']" [value]="type">{{ type }}</md-option>
+      </md-select>
+    </div>
+  </div>
+  <div fxFlex="500px" fxLayout="column">
+    <bd-google-chart fxFlex type="ColumnChart" [data]="line_ChartData" [options]="line_ChartOptions"></bd-google-chart>
+  </div>
+</section>

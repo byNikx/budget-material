@@ -26,7 +26,7 @@ export class ExpansionPanelComponent implements OnInit {
     setTimeout(()=>{
       this.isLoading = false;
       this.isActive = true;
-    },2000);
+    },300);
   }
 
 

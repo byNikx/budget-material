@@ -11,11 +11,17 @@ import {
   MdSidenavModule,
   MdToolbarModule,
   MdProgressBarModule,
-  MdCardModule
+  MdProgressSpinnerModule,
+  MdCardModule,
+  MdInputModule,
+  MdSelectModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+import { SubCategoryComponent } from './sub-category/sub-category.component';
+import { EditCategoryComponent } from './edit-category/edit-category.component';
+import { GoogleChartComponent } from './google-chart/google-chart.component';
 
 const MD_COMPONENTS =[
   MdButtonModule,
@@ -24,13 +30,19 @@ const MD_COMPONENTS =[
   MdSidenavModule,
   MdToolbarModule,
   MdProgressBarModule,
-  MdCardModule
+  MdProgressSpinnerModule,
+  MdCardModule,
+  MdInputModule,
+  MdSelectModule
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExpansionPanelComponent
+    ExpansionPanelComponent,
+    SubCategoryComponent,
+    EditCategoryComponent,
+    GoogleChartComponent
   ],
   imports: [
     BrowserModule,

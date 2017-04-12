@@ -22,23 +22,9 @@
   </div>
   <div class="body" *ngIf="isActivePanel()">
     <ul class="sub-category-list" fxLayout="column" fxLayoutGap="20px">
-      <li class="sub-category" fxLayout="row" fxLayoutGap="10px" *ngFor="let i of [1,2,3,4,5]">
-        <md-icon>subdirectory_arrow_right</md-icon>
-        <div fxLayout="column" fxFlex>
-          <h4 class="name no-margin">Child's Hobbies, Music & Sport</h4>
-          <div>
-            <label class="subhead">Budget:</label> 09780987
-          </div>
-          <div>
-            <label class="subhead">Actual:</label> 109090
-          </div>
-        </div>
-        <button md-icon-button>
-          <md-icon class="secondary-text">mode_edit</md-icon>
-        </button>
+      <li *ngFor="let i of [1,2,3,4,5]">
+        <bd-sub-category></bd-sub-category>
       </li>
-      <li></li>
-      <li></li>
     </ul>
   </div>
   <!-- <div class="action-pane" fxLayout="row" fxLayoutAlign="end center" *ngIf="isActivePanel()">

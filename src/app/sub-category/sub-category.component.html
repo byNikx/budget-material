@@ -1,0 +1,27 @@
+<section class="sub-category" fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row" fxLayoutGap="10px">
+    <md-icon class="secondary-text">{{isEditingEnable()?'mode_edit':'subdirectory_arrow_right'}}</md-icon>
+    <div fxLayout="column" fxFlex>
+      <h4 class="name no-margin">
+        Child's Hobbies, Music & Sport
+        <span class="caption">
+          {{
+            isEditingEnable()?'(Editing)':''
+          }}
+      </span>
+      </h4>
+      <div *ngIf="!isEditingEnable()">
+        <div>
+          <label class="subhead">Budget:</label> 09780987
+        </div>
+        <div>
+          <label class="subhead">Actual:</label> 109090
+        </div>
+      </div>
+    </div>
+    <button md-icon-button (click)="toggleEditing()">
+      <md-icon class="secondary-text">{{isEditingEnable()?'close':'mode_edit'}}</md-icon>
+    </button>
+  </div>
+  <bd-edit-category *ngIf="isEditingEnable()"></bd-edit-category>
+</section>
