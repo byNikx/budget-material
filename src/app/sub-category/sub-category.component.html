@@ -11,8 +11,12 @@
       </span>
       </h4>
       <div *ngIf="!isEditingEnable()">
-        <div>
-          <label class="subhead">Budget:</label> 09780987
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <label class="subhead">Budget:</label>
+          09780987
+          <span class="difference positive numeric" fxLayout="row" fxLayoutAlign="end center">
+            <md-icon class="md-18">arrow_upward</md-icon> 10%
+          </span>
         </div>
         <div>
           <label class="subhead">Actual:</label> 109090

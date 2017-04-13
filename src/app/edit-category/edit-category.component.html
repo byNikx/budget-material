@@ -1,14 +1,48 @@
-<section fxLayout="row" fxLayoutGap="30px">
-  <div fxFlex fxLayout="column">
-    <div fxLayout="row" fxLayoutGap="10px">
+<section fxLayout="row" fxLayoutGap="100px" style="border-bottom:1px solid rgba(0,0,0,0.12); margin-bottom:30px; border:1px solid rgba(0,0,0,0.12); padding:20px;">
+  <div fxFlex fxLayout="column" fxLayoutGap="20px">
+    <h3>My Budget</h3>
+
+
+    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center">
       <md-input-container fxFlex>
-        <input mdInput placeholder="City">
+        <input mdInput placeholder="DKK">
       </md-input-container>
-      <md-select placeholder="Transaction Type">
+      <!-- <md-select placeholder="Transaction Type">
          <md-option *ngFor="let type of ['Expense', 'Income']" [value]="type">{{ type }}</md-option>
-      </md-select>
+      </md-select> -->
+      <md-radio-group fxLayoutGap="10px">
+        <md-radio-button [checked]="true" value="1">Expense</md-radio-button>
+        <md-radio-button value="2">Income</md-radio-button>
+      </md-radio-group>
     </div>
+
+    <div>
+      <md-radio-group fxLayoutGap="10px">
+        <md-radio-button [checked]="true" value="1">From now on</md-radio-button>
+        <md-radio-button value="2">Just this month <strong class="subhead">(April, 2017)</strong></md-radio-button>
+      </md-radio-group>
+    </div>
+
+    <h3>Auto Budget</h3>
+
+    <div>
+      <md-radio-group fxLayout="column" fxLayoutGap="10px">
+        <md-radio-button value="1">Last month: <strong class="subhead">£ 2,200.00</strong></md-radio-button>
+        <md-radio-button value="2">3 month average: <strong class="subhead">£ 2,200.00</strong></md-radio-button>
+        <md-radio-button value="3">12 month average: <strong class="subhead">£ 2,200.00</strong></md-radio-button>
+        <!-- <md-radio-button value="4">Same as: <md-select><md-option *ngFor="let month of [1,2,3,4,5,6,7,8,9,10,11,12]" [value]="month">{{month}}</md-option></md-select> months ago</md-radio-button> -->
+      </md-radio-group>
+    </div>
+
+    <p>
+      <button disabled md-raised-button color="accent">UPDATE</button>
+      <button md-button>CANCEL</button>
+    </p>
+
   </div>
+
+  <div style="border-left:1px solid rgba(0,0,0,0.12);"></div>
+
   <div fxFlex="500px" fxLayout="column">
     <bd-google-chart fxFlex type="ColumnChart" [data]="line_ChartData" [options]="line_ChartOptions"></bd-google-chart>
   </div>

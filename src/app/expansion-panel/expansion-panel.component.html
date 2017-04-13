@@ -1,4 +1,4 @@
-<section [ngClass]="{'bd-expansion-panel-wrap mat-elevation-z1': true, 'last':isLastPanel(), 'active mat-elevation-z8': isActivePanel(), 'loading mat-elevation-z4': isLoadingPanel()}" fxLayout="column">
+<section [ngClass]="{'bd-expansion-panel-wrap mat-elevation-z1': true, 'last':isLastPanel(), 'active mat-elevation-z8': isActivePanel(), 'loading mat-elevation-z4': isLoadingPanel(), 'first': isFirstPanel()}" fxLayout="column">
   <div class="notification mat-elevation-z2" *ngIf="isActivePanel() && category.notification" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
     <md-icon>sentiment_dissatisfied</md-icon>
     <span fxFlex fxLayout="column">
@@ -12,17 +12,22 @@
   <div class="header" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="30px" (click)="test()">
     <span fxFlex>
       {{category.name}}
-      <span class="subhead" *ngIf="isActivePanel()"> have <strong>4</strong> sub categories</span>
+      <span class="subhead" *ngIf="isActivePanel()"> has <strong>4</strong> sub categories</span>
     </span>
-    <span class="secondary-text numeric" fxFlex="100px">${{category.actual}}</span>
-    <span class="secondary-text numeric" fxFlex="100px">${{category.budget}}</span>
+    <span class="secondary-text numeric" fxFlex="150px">${{category.actual}}</span>
+    <span class="secondary-text numeric" fxFlex="150px" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+      ${{category.budget}}
+      <span class="difference negative" fxLayout="row" fxLayoutAlign="end center">
+        <md-icon class=" md-18">arrow_downward</md-icon> 10%
+      </span>
+    </span>
     <button md-icon-button>
       <md-icon>{{isActivePanel()?'expand_less':'expand_more'}}</md-icon>
     </button>
   </div>
   <div class="body" *ngIf="isActivePanel()">
     <ul class="sub-category-list" fxLayout="column" fxLayoutGap="20px">
-      <li *ngFor="let i of [1,2,3,4,5]">
+      <li  *ngFor="let i of [1,2,3,4,5]">
         <bd-sub-category></bd-sub-category>
       </li>
     </ul>

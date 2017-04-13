@@ -1,0 +1,12 @@
+<section fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <button md-icon-button (click)="previous()" [disabled]="isFirst()">
+    <md-icon>chevron_left</md-icon>
+  </button>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <h4 class="no-margin" style="min-width:10px; text-align:center">{{label}}</h4>
+    <span class="subhead" style="font-size:12px;">{{year}}</span>
+  </div>
+  <button md-icon-button (click)="next()" [disabled]="isLast()">
+    <md-icon>chevron_right</md-icon>
+  </button>
+</section>

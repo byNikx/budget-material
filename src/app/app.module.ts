@@ -14,7 +14,8 @@ import {
   MdProgressSpinnerModule,
   MdCardModule,
   MdInputModule,
-  MdSelectModule
+  MdSelectModule,
+  MdRadioModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -22,8 +23,10 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
 import { SubCategoryComponent } from './sub-category/sub-category.component';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
 import { GoogleChartComponent } from './google-chart/google-chart.component';
+import { SliderComponent } from './slider/slider.component';
 
 const MD_COMPONENTS =[
+  FlexLayoutModule,
   MdButtonModule,
   MdCheckboxModule,
   MdIconModule,
@@ -33,7 +36,8 @@ const MD_COMPONENTS =[
   MdProgressSpinnerModule,
   MdCardModule,
   MdInputModule,
-  MdSelectModule
+  MdSelectModule,
+  MdRadioModule
 ];
 
 @NgModule({
@@ -42,13 +46,13 @@ const MD_COMPONENTS =[
     ExpansionPanelComponent,
     SubCategoryComponent,
     EditCategoryComponent,
-    GoogleChartComponent
+    GoogleChartComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    FlexLayoutModule,
     BrowserAnimationsModule
   ].concat(MD_COMPONENTS),
   providers: [],

@@ -26,6 +26,12 @@
 .bd-expansion-panel-wrap.last, .bd-expansion-panel-wrap.active, .bd-expansion-panel-wrap.loading{
   border-bottom: 0;
 }
+.bd-expansion-panel-wrap.first{
+  margin-top: 0 !important;
+}
+.bd-expansion-panel-wrap.last{
+  margin-bottom: 0 !important;
+}
 .bd-expansion-panel-wrap.active, .bd-expansion-panel-wrap.loading{
   margin: 16px 0;
 }
@@ -44,4 +50,16 @@
   padding: 0;
   margin: 0;
   margin-top: 1em;
+}
+.difference{
+  font-size: 12px;
+}
+.difference md-icon{
+  line-height: 24px;
+}
+.difference.positive{
+  color: green;
+}
+.difference.negative{
+  color: #F44336;
 }
