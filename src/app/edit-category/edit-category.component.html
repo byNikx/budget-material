@@ -33,7 +33,30 @@
         <!-- <md-radio-button value="4">Same as: <md-select><md-option *ngFor="let month of [1,2,3,4,5,6,7,8,9,10,11,12]" [value]="month">{{month}}</md-option></md-select> months ago</md-radio-button> -->
       </md-radio-group>
     </div>
-
+    <div *ngIf="showMoreOptions" style="border-top:1px solid rgba(0,0,0,0.12);" fxLayout="column" fxLayoutGap="20px">
+      <h3>Validity</h3>
+      <p fxLayout="row" fxLayoutGap="20px">
+        <md-select placeholder="Valid From" [(ngModel)]="validFrom" name="validFrom">
+          <md-option *ngFor="let month of ['April 2017', 'May 2017', 'June 2017', 'July 2017', 'August 2017', 'September 2017', 'October 2017', 'November 2017', 'December 2017']" [value]="month">
+            {{month}}
+          </md-option>
+        </md-select>
+        <md-select placeholder="Until" [(ngModel)]="validUntil" name="validUntil">
+          <md-option *ngFor="let month of ['April 2017', 'May 2017', 'June 2017', 'July 2017', 'August 2017', 'September 2017', 'October 2017', 'November 2017', 'December 2017']" [value]="month">
+            {{month}}
+          </md-option>
+        </md-select>
+      </p>
+      <h3>Track my progress</h3>
+      <md-checkbox>Add your spending goal to "Eye on the expenses"</md-checkbox>
+      <md-checkbox>Notify me with e-mail when my expenses exceed my budget limit</md-checkbox>
+      <md-input-container class="example-full-width">
+        <textarea mdInput placeholder="Comment"></textarea>
+      </md-input-container>
+    </div>
+    <p>
+      <md-slide-toggle [(ngModel)]="showMoreOptions">More options</md-slide-toggle>
+    </p>
     <p>
       <button disabled md-raised-button color="accent">UPDATE</button>
       <button md-button>CANCEL</button>

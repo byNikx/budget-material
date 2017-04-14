@@ -15,7 +15,8 @@ import {
   MdCardModule,
   MdInputModule,
   MdSelectModule,
-  MdRadioModule
+  MdRadioModule,
+  MdSlideToggleModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -37,7 +38,8 @@ const MD_COMPONENTS =[
   MdCardModule,
   MdInputModule,
   MdSelectModule,
-  MdRadioModule
+  MdRadioModule,
+  MdSlideToggleModule
 ];
 
 @NgModule({
