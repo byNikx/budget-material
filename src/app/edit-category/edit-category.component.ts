@@ -13,16 +13,18 @@ export class EditCategoryComponent implements OnInit {
   }
 
   public line_ChartData = [
-        ['Year', 'Budget', 'Spending'],
-        ['2004', 1000, 400],
-        ['2005', 3467, 460],
-        ['2006', 660, 1120],
-        ['2007', 1030, 540]];
+        ['Month', 'Budget', 'Spending'],
+        ['Jan', 2345, 4030],
+        ['Feb', 3467, 2460],
+        ['Mar', 4344, 2321],
+        ['Apr', 2344, 5432],
+        ['May', 7863, 3532],
+        ['Jun', 3565, 5435]];
 
   public line_ChartOptions = {
         chart: {
-          title: 'Last 12 months budget and actual spending',
-          subtitle: 'Average is $28737'
+          title: 'Last 6 months budget and actual spending',
+          subtitle: 'Avg Spending: £ 3737 | Avg Budget: £ 2737'
         },
         width: '100%',
         height: '400',
